@@ -36,10 +36,11 @@ public class Cliente implements UserDetails {
 		super();
 		this.cpf = cpf;
 		this.nome = nome;
+		this.end = end;
 		this.tel = tel;
 		this.senha = senha;
 		this.email = email;
-		this.end = end;
+		
 		}
 
 	public long getId() {
@@ -65,7 +66,13 @@ public class Cliente implements UserDetails {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+public String getEnd() {
+		return end;
+	}
 
+	public void setEnd(String end) {
+		this.end = end;
+	}
 	public String getTel() {
 		return tel;
 	}
@@ -90,13 +97,7 @@ public class Cliente implements UserDetails {
 		this.email = email;
 	}
 
-	public String getEnd() {
-		return end;
-	}
-
-	public void setEnd(String end) {
-		this.end = end;
-	}
+	
 
 	public Cliente id(long id) {
 		setId(id);

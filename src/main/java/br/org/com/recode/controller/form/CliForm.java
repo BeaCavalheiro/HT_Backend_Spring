@@ -83,6 +83,6 @@ public class CliForm {
 	public Cliente converter(BCryptPasswordEncoder encoder) {
 
 	    this.setSenha(encoder.encode(senha));
-	    return new Cliente(cpf, nome, end, tel, senha, email);
+	    return new Cliente(cpf, nome, tel, senha, email, end);
 	  }
 }

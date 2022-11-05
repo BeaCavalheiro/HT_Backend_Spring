@@ -59,7 +59,7 @@ public class Security extends WebSecurityConfigurerAdapter {
 		.antMatchers(HttpMethod.POST, "/cadastrar").permitAll()
 		.antMatchers(HttpMethod.POST, "/user/auth").permitAll()
 		.antMatchers(HttpMethod.POST, "/user/cadastrar").permitAll()
-		.antMatchers(HttpMethod.GET, "/user/listar").permitAll()
+		.antMatchers(HttpMethod.GET, "/listar").permitAll()
 		.anyRequest().authenticated()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and().addFilterBefore(new AutenticacaoTokenFilter(tokenService, clienteRepository), UsernamePasswordAuthenticationFilter.class)
